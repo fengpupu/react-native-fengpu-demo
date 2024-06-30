@@ -5,14 +5,14 @@ import Card from "./part/card";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Utils from "../common/utils";
 let demoList=[
-  {
-    name: "test",
-    pathName: "test",
-    id: 0,
-    isFA: false,
-    icon: "stopwatch",
-    color: "#ff856c",
-  },
+  // {
+  //   name: "test",
+  //   pathName: "test",
+  //   id: 0,
+  //   isFA: false,
+  //   icon: "stopwatch",
+  //   color: "#ff856c",
+  // },
   {
     name: "计时器",
     pathName: "time",
@@ -46,21 +46,21 @@ let demoList=[
     color: "#4173ed",
   },
   {
-    name: "编辑器",
-    pathName: "inputView",
-    id: 5,
-    isFA: false,
-    icon: "partly-sunny",
-    color: "#90bdc1",
-  },
-  {
     name: "排序",
     pathName: "sortCard",
     id: 6,
-    isFA: false,
-    icon: "partly-sunny",
-    color: "#90bdc1",
+    isFA: true,
+    icon: "sort-amount-asc",
+    color: "#6c56d4",
   },
+  // {
+  //   name: "编辑器",
+  //   pathName: "inputView",
+  //   id: 5,
+  //   isFA: false,
+  //   icon: "partly-sunny",
+  //   color: "#90bdc1",
+  // },
   // {
   //   name: "天气",
   //   pathName: "weather",
