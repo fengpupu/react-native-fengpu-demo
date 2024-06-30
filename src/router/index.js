@@ -1,25 +1,43 @@
 //import liraries
-import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React, { Component } from "react";
+import { View, Text, StyleSheet, SafeAreaView } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Home from "../home/index";
+import Layout from "../pages/layout";
+
+const Stack = createNativeStackNavigator();
 
 // create a component
 const MyComponent = () => {
   return (
-    <View style={styles.container}>
-      <Text>MyComponent</Text>
-    </View>
+    // 首先，所有的导航都要被包裹在NavigationContainer里面
+    <NavigationContainer>
+      {/* <SafeAreaView style={{ flex: 1 }}> */}
+          <Stack.Navigator>
+            <Stack.Screen
+              name="Home"
+              component={Home}
+              options={{
+                title:'react native demos',
+              }}
+            />
+          <Stack.Screen
+              name="Layout"
+              component={Layout}
+              options={{
+                title:'Layout',
+                headerBackTitle:'home',
+              }}
+            />
+          </Stack.Navigator>
+    </NavigationContainer>
   );
 };
-
-// define your styles
 const styles = StyleSheet.create({
-  container: {
+  navigatorView: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#2c3e50',
   },
 });
 
-//make this component available to the app
 export default MyComponent;
